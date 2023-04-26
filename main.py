@@ -1,5 +1,10 @@
 import os
 
+# 作者：suifeng7663（https://github.com/suifeng333）
+# 该项目开源地址：https://github.com/suifeng333/LinuxAutoTool
+# 该项目遵循 GNU GENERAL PUBLIC LICENSE V3.0
+# 该项目为全国学生信息素养提升实践参赛作品
+
 print("请确保是否为sudo执行该脚本")
 while (True):
     try:
