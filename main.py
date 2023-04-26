@@ -1,5 +1,7 @@
 import os
 
+print("请确保是否为sudo执行该脚本\n")
+int(input("输入1回车确定为sudo执行该脚本："))
 while (True):
     print("*********************")
     print("**                 **")
@@ -103,6 +105,8 @@ while (True):
                 print("正在更新软件源")
                 os.system("sudo apt update")
                 continue
+            if (i2 == 0):
+                exit()
     if (i == 2):
         print("WARN：操作过程中可能需要输入sudo密码")
         print("正在更新软件源并升级软件包")
