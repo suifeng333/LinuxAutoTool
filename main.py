@@ -1,7 +1,15 @@
 import os
 
-print("请确保是否为sudo执行该脚本\n")
-int(input("输入1回车确定为sudo执行该脚本："))
+print("请确保是否为sudo执行该脚本")
+while (True):
+    try:
+        j = int(input("输入1回车确定为sudo执行该脚本，则不是请输入任意数字退出："))
+        break
+    except:
+        print("请根据提示输入！")
+if (j != 1):
+    print("请使用sudo来执行该脚本，否则出现不可预想的后果！")
+    exit()
 while (True):
     print("*********************")
     print("**                 **")
@@ -12,7 +20,6 @@ while (True):
     print("*********************")
     while True:
         try:
-            print("请确保是否为sudo执行该脚本")
             i = int(input("选择操作：1.更换软件源 2.更新软件源并升级软件包 0.退出\n请输入："))
             break
         except:
@@ -63,7 +70,8 @@ while (True):
                 os.system("sudo apt update")
                 continue
             if (i2 == 0):
-                exit()
+                break
+                exit("您已退出！")
         if (i1 == 2):
             i2 = int(input("选择软件源：1.清华大学镜像源 2.北京外国语大学镜像源 3.中国科学技术大学镜像源 0.退出\n请输入："))
             if (i2 == 1):
@@ -106,7 +114,8 @@ while (True):
                 os.system("sudo apt update")
                 continue
             if (i2 == 0):
-                exit()
+                break
+                exit("您已退出!")
     if (i == 2):
         print("WARN：操作过程中可能需要输入sudo密码")
         print("正在更新软件源并升级软件包")
