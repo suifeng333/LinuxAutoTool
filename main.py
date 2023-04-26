@@ -10,6 +10,7 @@ while (True):
     print("*********************")
     while True:
         try:
+            print("请确保是否为sudo执行该脚本")
             i = int(input("选择操作：1.更换软件源 2.更新软件源并升级软件包 0.退出\n请输入："))
             break
         except:
