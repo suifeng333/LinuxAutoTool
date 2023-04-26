@@ -69,7 +69,7 @@ while (True):
             if (i2 == 1):
                 print("WARN：操作过程中可能需要输入sudo密码")
                 os.system("sudo rm -rf /etc/apt/sources.list")
-                f = open('/etc/apt/' + 'sources' + '.list' + 'w+')
+                f = open('/etc/apt/sources.list', 'w+')
                 f.close()
                 f1 = open('/etc/apt/sources.list', 'w+')
                 f1.write(
